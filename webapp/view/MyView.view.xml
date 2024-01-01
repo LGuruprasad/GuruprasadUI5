@@ -1,8 +1,13 @@
-<mvc:View controllerName="MyApp.controller.MyController" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:f="sap.ui.layout.form">
+<mvc:View xmlns:simple="sap.gantt.simple" xmlns:unified="sap.ui.unified" xmlns:ubc="sap.gantt.shape.ext.ubc" xmlns:composite="sap.uiext.inbox.composite" xmlns:ext="sap.gantt.shape.ext" xmlns:uxap="sap.uxap" xmlns:shape="sap.gantt.shape" xmlns:f2="sap.f" xmlns:vk="sap.ui.vk" xmlns:cards="sap.f.cards" xmlns:layout="sap.ui.layout" xmlns:config="sap.gantt.config" xmlns:table="sap.ui.table" 
+		  controllerName="MyApp.controller.MyController" 
+		  xmlns:core="sap.ui.core" 
+		  xmlns:mvc="sap.ui.core.mvc" 
+		  xmlns="sap.m" 
+		  xmlns:f="sap.ui.layout.form">
     <VBox>
 		<f:SimpleForm
 			layout="ResponsiveGridLayout"
-			title="Demo" >
+			title="Training" >
 			<f:content>
 				<Label text="Value 1" />
 				<Input id="value1" value="{/field1}" />
@@ -16,6 +21,9 @@
 				</Select>
 				<Label text="Output" />
 				<Text text="{/output}"/>
+				
+				
+				
 			</f:content>
 		</f:SimpleForm>
         <Button text="Calculate" press=".calculate"/>		
