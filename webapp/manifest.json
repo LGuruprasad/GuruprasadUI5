@@ -1,0 +1,47 @@
+{
+    "_version" : "1.30.0",
+    "sap.app": {
+        "id": "MyApp",
+        "type":"application",
+        "applicationVersion": {
+            "version": "1.0.0"
+        },
+        "title": "{MyTool}",
+        "description": "{{Appdescription}}"
+
+    },
+    "sap.ui":{
+        "technology":"UI5",
+        "deviceTypes":{
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+    "sap.ui5":{
+        "rootView":{
+            "viewName": "MyApp.view.MyView",
+            "type": "XML"
+        },
+        "dependencies": {
+            "minUI5Version": "1.71.0",
+            "libs": {
+                "sap.m":{},
+                "sap.ui.core": {}
+            }
+        },
+            "models": {
+        "": {
+            "type":"sap.ui.json.JSONModel"
+        },
+        "I18n": {
+            "type": "sap.ui.model.resource.ResourceModel",
+            "settings": {
+                "bundleName": "MyApp.i18n.i18n"
+            }
+        }
+    }
+        
+    }
+
+}

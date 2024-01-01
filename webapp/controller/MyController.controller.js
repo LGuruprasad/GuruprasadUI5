@@ -10,7 +10,8 @@ sap.ui.define([
                 field2: "",
                 operations:[
                     {"id": "", "text": "" },
-                    {"id": "+", "text": "Addition"}
+                    {"id": "+", "text": "{i18n>Addition}"},
+                    {"id": "*", "text": "{i18n>Multiplication}"}
                 ]
             };
             var oModel = new JSONModel(oData);

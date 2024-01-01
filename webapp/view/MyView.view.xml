@@ -9,23 +9,23 @@
 			layout="ResponsiveGridLayout"
 			title="Training" >
 			<f:content>
-				<Label text="Value 1" />
+				<Label text="{i18n>firstvalue}" />
 				<Input id="value1" value="{/field1}" />
-				<Label text="Value 2" />
+				<Label text="{i18n>secondvalue}" />
 				<Input id="value2" value="{/field2}" />
-				<Label text="Operator" />
+				<Label text="{i18n>Operatorselection}" />
 				<Select selectedKey ="{/operator}" items="{/operations}">
 					<items>
 						<core:Item key ="{id}" text="{text}" />
 					</items>
 				</Select>
-				<Label text="Output" />
+				<Label text="{i18n>Output}" />
 				<Text text="{/output}"/>
 				
 				
 				
 			</f:content>
 		</f:SimpleForm>
-        <Button text="Calculate" press=".calculate"/>		
+        <Button text="{i18n>Result}" press="calculate"/>		
     </VBox>
 </mvc:View>
