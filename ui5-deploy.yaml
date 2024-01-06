@@ -18,7 +18,7 @@ builder:
           url: http://wssa4.buhler-ltd.com:443
         app:
           name: ZUI5_GURU
-          description: ZG_UI5_Deploy
+          description: My First Fiori app Deployment
           package: ZUI5_TRAINING
           transport: SA4K902485
         exclude:
