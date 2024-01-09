@@ -9,12 +9,16 @@
 				<Label text="{i18n>description}" />
 				<Text id="value2" text="{description}" />
 				<Label text="{i18n>amount}" />
-				<!-- <Text text="{totalAmount}"/> -->
-				<Input value="{totalAmount}"/>
+				<Text text="{totalAmount}"/>
+				<!-- <Input value="{totalAmount}"/> -->
 				<Label text="{i18n>high?}" />
-				<Text text="{= ${totalAmount} > 2000 ? 'High' : 'Low' " />			
-				<Label text="One More" />
-				<Text text="{= ${totalAmount} + 1}" />	
+				<Text text="{= ${totalAmount} > 2000 ? 'High' : 'Low' }" />			
+				<Label text=" More" />
+				<Text text="{= ${totalAmount} + 1}" />
+				<Label text ="Additionalvalue" />	
+				<Input value = "{Number}" />
+				<Label text="Confirmation Amount" />
+				<Text text="{=${totalamount} + ${Number}}" />
 			</f:content>
 		</f:SimpleForm>
 		<HBox>		

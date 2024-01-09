@@ -3,7 +3,7 @@ sap.ui.define([], function() {
 
     return {
         toTwoDecimals: function(num) {
-            const output = parseInt(num).toFixed(2);
+            const output = parseInt(num).toFixed(5);
             return output;
         }
     };
