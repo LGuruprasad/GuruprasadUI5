@@ -1,5 +1,5 @@
-<mvc:View controllerName="sap.btp.sapui5.controller.List" xmlns:mvc="sap.ui.core.mvc" displayBlock="true" xmlns="sap.m">
-	<Page id="listPage" title="{i18n>ListTitle}" >
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" controllerName="sap.btp.sapui5.controller.List" displayBlock="true">
+	<Page id="listPage" title="{i18n>ListTitle}">
 		<subHeader>
 			<Bar id="_IDGenBar1">
 				<contentLeft>
@@ -7,15 +7,32 @@
 				</contentLeft>
 			</Bar>
 		</subHeader>
-		<List id="list" items="{/Products}">
-			<ObjectListItem id="_IDGenObjectListItem1" type="Navigation" press="handleListItemPress" title="{ProductName}" number="{= ((${UnitPrice} * 100) / 100).toFixed(2) }" numberUnit="{i18n>Currency}">
-				<attributes>
-					<ObjectAttribute id="_IDGenObjectAttribute1" text="{QuantityPerUnit}"/>
-				</attributes>
-				<firstStatus>
-					<ObjectStatus id="_IDGenObjectStatus1" text="{= ${Discontinued} ? ${i18n>Discontinued} : ${i18n>Available} }" state="{= ${Discontinued}? 'Error' : 'Success' }"/>
-				</firstStatus>
-			</ObjectListItem>
-		</List>
+  <content>
+      <Table noDataText="Drop column list items here and columns in the area above" id="table0" items="{/Products}">
+          <items>
+              <ColumnListItem type="Active" id="item0">
+                  <cells>
+                      <Text text="{ProductID}" id="text6"/>
+                      <Text text="{ProductName}" id="text7"/>
+                      <Text text="{UnitPrice} !" id="text8"/></cells>
+              </ColumnListItem>
+          </items>
+          <columns>
+              <Column id="column0">
+                  <header>
+                      <Label text="{i18n>ProductID}" id="label0"/>
+                  </header>
+              </Column>
+              <Column id="column1">
+                  <header>
+                      <Label text="{i18n>ProductName}" id="label1"/>
+                  </header>
+              </Column>
+              <Column id="column2">
+                  <header>
+                      <Label text="{i18n>UnitPrice}" id="label2"/>
+                  </header>
+              </Column></columns></Table>
+  </content>
   </Page>
 </mvc:View>
